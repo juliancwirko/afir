@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Another File Input Replacement</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../jquery.afir.css"></link>
+</head>
+<body>
+	<div class="menu">
+		<div>
+			<a href="mailto:julian.cwirko@gmail.com"><i class="icon-envelope"></i> E-mail</a> <a href="http://www.redsunmedia.pl"><i class="icon-link"></i> WWW</a> <a href="https://github.com/juliancwirko/afir"><i class="icon-github"></i> GitHub</a>
+		</div>
+	</div>
+	<div class="container">
+		<h1>Another File Input Replacement Demo:</h1>
+			<div class="inputs"><input type="file" class="input-file-1"></div>
+			<div class="clearfix"></div>
+			<div class="inputs"><input type="file" class="input-file-2"></div>
+			<div class="clearfix"></div>
+			<div class="inputs"><input type="file" class="input-file-3"></div>
+			<div class="clearfix"></div>
+		<div class="code">
+<h3>Usage:</h3>
+<pre>
+	..all styling by CSS
+	...
+
+	&lt;link rel="stylesheet" href="jquery.afir.css"&gt;&lt;/link&gt;
+	&lt;script src="jquery.js"&gt;&lt;/script&gt;
+	&lt;script src="jquery.afir.js"&gt;&lt;/script&gt;
+	&lt;script&gt;
+		(function(){
+			$('input[type="file"]').afir();
+		})()
+	&lt;/script&gt;
+
+	...
+
+	..or You can set your settings:
+
+	...
+
+	&lt;script&gt;
+		(function(){
+			$('input[type="file"]').afir({
+				wrapperClass: 'afir-wrapper',
+				fileNameClass: 'afir-file-name',
+				buttonClass: 'afir-button',
+				buttonChooseLabel: 'Choose File'
+			});
+		})()
+	&lt;/script&gt;
+
+	...
+
+	..or You can set your settings:
+
+	...
+
+	and methods:
+
+	&lt;script&gt;
+		(function(){
+			$('.input-file22').afir('disableInput');
+			$('.input-file22').afir('enableInput');
+			$('.input-file22').afir('refreshInput');
+		})()
+	&lt;/script&gt;
+</pre>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="../jquery.afir.js"></script>
+	<script>
+		(function(){
+			$('.input-file-1').afir({
+				buttonChooseLabel: 'Choose'
+			});
+			$('.input-file-2').afir({
+				buttonChooseLabel: 'Go!',
+				fileNameClass: 'afir-filename-2',
+				buttonClass: 'afir-button-2'
+			});
+			$('.input-file-3').afir({
+				buttonChooseLabel: 'Pick one..',
+				buttonClass: 'afir-button-3'
+			});
+		})()
+	</script>
+</body>
+</html>

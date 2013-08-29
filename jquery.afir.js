@@ -44,6 +44,7 @@
 					$(el).click();
 					$(el).on('change', function(){
 						fileValue = $(this).val();
+						fileValue = fileValue.replace("C:\\fakepath\\", "");
 						$(this).siblings('.'+settings.fileNameClass).text(fileValue);
 					});
 				},

@@ -44,6 +44,8 @@
 					$(el).click();
 					$(el).on('change', function(){
 						fileValue = $(this).val();
+						fileValue = fileValue.split('\');
+						fileValue = fileValue[fileValue.length-1];
 						$(this).siblings('.'+settings.fileNameClass).text(fileValue);
 					});
 				},

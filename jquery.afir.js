@@ -22,7 +22,7 @@
 
 				this.wrapper = '<div class="'+this.settings.wrapperClass+'" />';
 				this.fileName = '<div class="'+this.settings.fileNameClass+'" />';
-				this.button = '<button class="'+this.settings.buttonClass+'" />';
+				this.button = '<button type="button" class="'+this.settings.buttonClass+'" />';
 
 				this.init();
 		}
@@ -41,12 +41,12 @@
 				},
 				chooseFile: function (el, settings) {
 					var fileValue;
-					$(el).click();
 					$(el).on('change', function(){
 						fileValue = $(this).val();
 						fileValue = fileValue.replace("C:\\fakepath\\", "");
 						$(this).siblings('.'+settings.fileNameClass).text(fileValue);
 					});
+					$(el).click();
 				},
 				disableInput: function() {
 					if ($(this.element).parent('.'+this.settings.wrapperClass).length) {
